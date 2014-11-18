@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>XMCI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="/static/css/bootstrap.css" rel="stylesheet">
+	<link href="/static/css/main.css" rel="stylesheet">	
+	<link href="/static/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<style type="text/css">	
+		.tip-info{border:1px solid #dedede;border-radius:5px;padding:10px;width:95%;height:250px;overflow:auto;margin-bottom:20px;box-shadow:0 0 5px #ddd;}
+		.tip-head{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #dddddd;font-size:17px;font-weight:bold;color:#666666}
+		.tip-info .pull-right{cursor:pointer;width:90px;}
+		.tip-info .pull-right img{margin-top:-4px;}
+		blockquote{font-family:微软雅黑;font-size:16px;}
+		blockquote span{font-size:16px;}
+		q:before, q:after, blockquote:before, blockquote:after {content:none;}
+	</style>
+</head>
+
+<body onload="">	
+	<div class="content">
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">客户经理管理</a>/<a href="#">客户经理信息管理</a>/<a href="#">客户额度管理</a>
+		</div>		
+	
+		<i class="icon-bookmark"></i><span class="titletip">客户额度信息</span>
+		<table class="table-list">				
+			<tr>	
+				<th>客户经理姓名</th>	
+				<th>机构号</th>
+				<th>行内编号</th>
+				<th>产品名称</th>
+				<th>客户经理额度</th>
+			</tr>
+			<tr class="center" onclick="changeColor(this)">		
+				<td>吉利</td>			
+				<td>02</td>		
+				<td>001</td>
+				<td>产品1</td>
+				<td><input type="text" value="30000"/></td>						
+			</tr>	
+			<tr class="center" onclick="changeColor(this)">		
+				<td>吉利</td>			
+				<td>02</td>		
+				<td>001</td>
+				<td>产品2</td>
+				<td><input type="text" value="10000"/></td>						
+			</tr>
+			<tr class="center" onclick="changeColor(this)">		
+				<td>吉利</td>			
+				<td>02</td>		
+				<td>001</td>
+				<td>产品3</td>
+				<td><input type="text" value="50000"/></td>						
+			</tr>
+		</table>
+		<input type="button" class="btn btn-info" value="保存"/>
+	</div>
+	<script src="/static/js/jquery-1.7.2.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>	
+	<script src="/static/js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="/static/js/script.js"></script>
+	<script>
+ $('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})
+</script>
+</body>
+</html>

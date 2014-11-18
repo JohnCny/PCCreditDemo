@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<!-- ************************验证样式************************-->
+	<script src="../../../static/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="../../../static/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>	
+	<div class="content">	
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">产品管理</a>/<a href="#">产品属性</a>
+		</div>	
+		<i class='icon-bookmark'></i><span class='titletip'>产品类别</span>
+		<form>
+			<table class='table-list'>
+				<tr>
+					<td class='table-label'>类别名称</td>
+					<td colspan="3">
+						<input type='text' name=''/>
+					</td>
+				<tr>
+				<tr>
+					<td class='table-label' colspan="4"><b>产品性质</b></td>
+				</tr>							
+				<tr>
+					<td class='table-label'>产品利率</td>
+					<td>
+						<input type='text' name=''/>
+					</td>
+					<td class='table-label'>产品期限</td>
+					<td>
+						<input type='text' name=''/>
+					</td>																		
+				</tr>							
+				<tr>
+					<td class='table-label'>产品运作方式</td>
+					<td colspan="3">
+						<input type='text' name=''/>
+					</td>																	
+				</tr>
+				<tr>
+					<td class='table-label' colspan="4"><b>产品审核审批规则</b></td>
+				</tr>	
+				<tr>
+					<td class='table-label'>审核层级规则</td>
+					<td>
+						<select>
+							<option>一级</option>
+							<option>二级</option>
+							<option>三级</option>
+						</select>
+					</td>
+					<td class='table-label'>审核权限规则</td>
+					<td>
+						<select>
+							<option>行长</option>
+							<option>客户经理主管</option>
+							<option>客户经理</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class='table-label'>审贷会成员人数</td>
+					<td>
+						<select>
+							<option>5人</option>
+							<option>3人</option>
+							<option>1人</option>
+						</select>
+					</td>
+					<td class='table-label'>审贷会成员人数</td>
+					<td>
+						<select>
+							<option>非主管</option>
+							<option>随机有权人员</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class='table-label'>审贷会人员角色定义</td>
+					<td>
+						<input type='text' name=''/>
+					</td>
+					<td class='table-label'>审贷会决议规则</td>
+					<td>
+						<select>
+							<option>全票通过</option>
+							<option>10票</option>
+							<option>1票否决</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class='table-label' colspan="4"><b>产品催收规则</b></td>
+				</tr>
+				<tr>
+					<td class='table-label'>催收方式</td>
+					<td>
+						<select>
+							<option>电话催收</option>
+							<option>短信催收</option>
+							<option>实地催收</option>
+							<option>法务催收</option>
+							<option>委外催收</option>
+						</select>
+					</td>
+					<td class='table-label'>账龄匹配</td>
+					<td>
+						<select>
+							<option>账龄1</option>
+							<option>账龄2</option>
+							<option>账龄3</option>
+							<option>账龄4</option>
+							<option>账龄5</option>
+							<option>账龄6</option>
+							<option>账龄7</option>
+							<option>账龄8</option>
+							<option>账龄9</option>
+							<option>账龄10</option>
+							<option>账龄11</option>
+							<option>账龄12</option>
+							<option>账龄13</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class='table-label'>产品问责条件</td>
+					<td colspan="3">
+						<label><input type="checkbox"/>风险责任人出现道德风险</label>
+						<label><input type="checkbox"/>风险责任人出现操作风险</label>
+						<label><input type="checkbox"/>账龄</label>
+						<label><input type="checkbox"/>逾期金额</label>
+						<label><input type="checkbox"/>累计逾期次数</label>
+						<label><input type="checkbox"/>累计逾期金额</label>
+					</td>
+				</tr>
+			</table>
+			<input type='button' class='btn btn-info' value='提交'/>													
+		</form>
+	</div><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/script.js"></script>
+</body>
+</html>

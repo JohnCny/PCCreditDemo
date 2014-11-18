@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<!-- ************************验证样式************************-->
+	<script src="../../../static/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="../../../static/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="datepicker();setTimeOut();">	
+	<div class="content">
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">客户经理管理</a>/<a href="#">客户经理日常维护</a>/<a href="#">风险警示书</a>
+		</div>	
+		
+		<div class="row-fluid">
+			<i class="icon-bookmark"></i><span class="titletip">搜索</span>
+			<form>
+				<table class="table-list">
+					<tr>
+						<td class="table-label">客户经理编号</td>
+						<td>
+							<input type="text" name=""/>
+						</td>
+						<td class="table-label">客户经理名称</td>
+						<td>
+							<input type="text" name=""/>						
+						</td>
+						<td class="table-label">所属机构</td>
+						<td>
+							<select name="">
+								<option>总行</option>
+								<option>分行</option>
+								<option>分理处</option>
+							</select>	
+						</td>					
+					</tr>
+				</table>
+				<input type="button" class="btn btn-info" value="搜索"/>													
+			</form>
+			<i class="icon-bookmark"></i><span class="titletip">风险警示列表</span><br/>
+			<div>				
+				<table class="table-list">
+					<thead>
+						<tr>	
+							<th>客户经理编号</th>		
+							<th>客户经理名称</th>		
+							<th>发起时间</th>
+							<th>主管建议</th>
+							<th>警示事项</th>	
+							<th>回执</th>
+							<th>反馈</th>	
+							<th>反馈时间</th>
+							<th>操作</th>	
+						</tr>
+					</thead>
+					<tbody class="center">						
+						<tr onclick="changeColor(this)">
+							<td>01</td>			
+							<td>倪文斌</td>
+							<td>2014-05-06</td>	
+							<td>提醒催收</td>
+							<td>有一笔逾期贷款</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><input type="button" class="btn btn-info" value="警示下发"/></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="page-div">				
+				<span style="CURSOR: pointer">&lt;&lt;</span>
+				&#160;第&#160;<font color="#0088cc">1</font>&#160;页&#160;
+				&#160;共&#160;<font color="#0088cc">1</font>&#160;页&#160;
+				<span style="CURSOR: pointer">&gt;&gt;</span>
+			</div>
+		</div><!--/row-fluid -->
+	</div><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/script.js"></script>
+	<script type="text/javascript">
+		
+	
+	</script>
+</body>
+</html>

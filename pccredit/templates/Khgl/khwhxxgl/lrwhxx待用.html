@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<style type="text/css">	
+		textarea{width:80%;}
+		input.btn-mini{width:20px;position:relative;top:-5px;display:inline-block;}
+	</style>	
+</head>
+
+<body onload="datepicker()">	
+	<form class="content">			
+		<div class="row-fluid">
+			<div class="well place">			
+				<i class="icon-home"></i><a href="#">客户管理</a>/<a href="#">客户维护信息管理</a>/<a href="#">客户维护信息录入</a>
+			</div>	
+			<i class="icon-bookmark"></i><span class="titletip">维护记录</span>
+			<div style="margin-bottom:5px;">
+				<a type="button" class="btn btn-info" href="#" onclick="iframe('Khgl/khwhxxgl/new_whxx')">新增</a>
+			</div>
+			<div class="divBorder">
+				<table id="jcjl" class="table-list">
+					<tr>
+						<th>客户名称</th>	
+						<th>维护时间</th>	
+						<th>维护地点</th>
+						<th>维护方式</th>						
+						<th>维护人员</th>								
+					</tr>
+					<tr class="center">				
+						<td><a href="#" onclick="iframe('Khgl/khwhxxgl/edit_whxx')">王军忠</a></td>
+						<td>2014-06-03</td>
+						<td>北京市朝阳区光华贸易中心3-2012店铺</td>
+						<td>实地维护</td>
+						<td>倪文斌</td>	
+					</tr>
+					<tr class="center">				
+						<td>王军忠</td>
+						<td>2014-05-03</td>
+						<td></td>
+						<td>非实地维护</td>
+						<td>李丽</td>	
+					</tr>
+					<tr class="center">				
+						<td>王军忠</td>
+						<td>2014-04-03</td>
+						<td>北京市朝阳区光华贸易中心3-2012店铺</td>
+						<td>实地维护</td>
+						<td>吉利</td>	
+					</tr>
+				</table>
+			</div>
+			<div class="page-div">
+				<span style="CURSOR: pointer">&lt;&lt;</span>
+				&#160;第&#160;<font color="#0088cc">1</font>&#160;页&#160;
+				&#160;共&#160;<font color="#0088cc">1</font>&#160;页&#160;
+				<span style="CURSOR: pointer">&gt;&gt;</span>
+			</div>
+		</div><!--/row-fluid -->
+	</form><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/script.js"></script>
+	<script src="../../../static/js/process.js"></script>
+	<script type="text/javascript">
+		var max=0;
+		var jegs=0;
+		var num=0;
+		var idCard=0;
+		var phone=0;
+		
+	</script>
+</body>
+</html>

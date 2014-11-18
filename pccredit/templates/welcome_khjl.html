@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>XMCI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../static/css/main.css" rel="stylesheet">	
+	<link href="../../static/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<style type="text/css">	
+		*{font-family:myfont1;}
+		a:hover{text-decoration:none;}
+		.nav-list span{color:#0088cc;}
+		#date{line-height:25px;font-size:12px;color:gray;margin-top:-30px;}
+		.tip-info{border:1px solid #dedede;border-radius:5px;padding:10px;width:95%;margin-bottom:20px;box-shadow:0 0 5px #ddd;}
+		.tip-head{font-size:17px;font-weight:bold;color:#666666}
+		.tip-add{font-size:15px;color:#808080;text-decoration:none;}
+		.tip-hover{font-size:15px;color:#0088cc;text-decoration:none;}
+		h4{color:#808080}
+		.tip-info .pull-right{cursor:pointer;width:90px;}
+		.tip-info .pull-right img{margin-top:-4px;}
+		.noContent{width:100%;text-align:center}
+		.noContent p{color:gray}
+		blockquote span{font-size:16px;}
+		.badge{position:relative;top:-1px;margin-left:5px;}
+		.mylist{border:1px solid #ccc;border-radius:5px;background:white;list-style:none;padding:5px 0px;width:80%;position:relative;top:-20px;left:-26px;}
+		.mylist li{line-height:35px;padding-left:10px;}
+		.mylist li:hover{background:#f7f7f7}
+		.myselect{display:inline-block;width:100px;}
+		.ok{text-align:right;}
+	</style>
+</head>
+
+<body onload="showdate();">	
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">				
+				<a class="brand" href="javascript:void(0);" onclick="iframe('welcome_khjl')">农商行微贷系统</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-right">
+						<li class="dropdown">
+							<a href="javascript:void(0);" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-user"></i>&nbsp;客户经理<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+								<li><a href="javascript:void(0);" onclick="$('#content').hide();$('#content_frame').show();">修改密码</a></li>
+								<li class="divider"></li>
+								<li>									
+									<a data-toggle="modal" data-target="#myModal">注销</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav" id="topmenu">
+						<li><a href="jjgl_khjl">进件管理</a></li>
+						<li><a href="yxgl_khjl">营销管理</a></li>
+						<li><a href="khgl_khjl">客户管理</a></li>												
+						<li><a href="zhfkgl_khjl">综合风控管理</a></li>											
+						<li><a href="xtgl_khjl">系统管理</a></li>	
+						<!-- <li><a href="khjlgl_khjl">客户经理管理</a></li> -->
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</div><!--/.navbar-inner -->		
+	</div><!--/.navbar -->
+	<!-- <img src="/static/img/welcome2.png" style="margin-top:40px;"/> -->
+	<div class="container-fluid" style="margin:60px auto 50px;">
+		<div class="row-fluid">
+			<div class="span3">				
+				<div class="well sidebar-nav" id="leftmenu">				
+					<ul class="nav nav-list">
+						<li class="nav-header">用户信息</li>
+						<li>
+							<a data-toggle="modal" data-target="#changeHead"><img src="../static/img/head/wx.jpg" class="img-circle" style="width:50px;box-shadow:1px 1px 10px #ccc;"></a>
+						</li>
+						<li>
+							<span style="color:gray">用户名：客户经理</span>
+						</li>
+						<li>
+							<span style="color:gray">职位：客户经理</span>
+						</li> 
+						<li>
+							<span style="color:gray">所属单位：农商行</span>
+						</li>  
+						<li>
+							<span style="color:gray">授信权限：50万</span>
+						</li>  
+					</ul>
+				</div><!--/.well -->						
+			</div><!--/span-->
+<!--**************************************************content***********************************************-->
+			<div class="span9 pull-right">					
+				<div id="content">
+					<div class="span6">
+					<!--****************************信息管理*************************************-->
+						<div class="tip-info">
+							<img src="../static/img/jiao.png" style="position:absolute;margin-top:-15px;margin-left:-15px;"/>
+							<span class="tip-head">&nbsp;&nbsp;&nbsp;待处理事项</span>									
+							<!-- <div class="pull-right">
+								<a href="Xzkh" onmouseover="hover(this)" onmouseout="away(this)">
+									<img src="../static/img/add.jpg" />
+									<span class="tip-add">新增客户</span>
+								</a>									
+							</div> -->
+							<hr/>						
+							<blockquote>
+								<span>贷前调查</span><a href="Dqdc" class="badge">4</a>
+							</blockquote>
+							<blockquote>
+								<span>贷后管理</span><a href="Dhgl" class="badge">4</a>
+							</blockquote>	
+							<blockquote>
+								<span>催收</span><a href="Cs" class="badge">6</a>
+							</blockquote>
+							<blockquote>
+								<span>今日计划营销客户</span><a href="tzgl" class="badge">6</a>
+							</blockquote>
+							<blockquote>
+								<span>今日计划维护客户</span><a href="Jrjhwhkh" class="badge">6</a>
+							</blockquote>
+							<blockquote>
+								<span>7日内预期还款 </span><a href="Yqhk" class="badge">3</a>
+							</blockquote>
+							<blockquote>
+								<span>审贷会邀请信息 </span><a class="badge">0</a>
+							</blockquote>
+							<blockquote>
+								<span>新品发布 </span><a class="badge">0</a>
+							</blockquote>
+						</div>
+					</div>
+					<div class="span6">
+					<!--****************************信息管理*************************************-->
+						<div class="tip-info">
+							<img src="../static/img/jiao.png" style="position:absolute;margin-top:-15px;margin-left:-15px;"/>
+							<span class="tip-head">&nbsp;&nbsp;&nbsp;通知</span>	
+							<hr/>						
+							<blockquote>
+								<span>经营收益状况</span><br/><a href="Dqdc" class="label label-info">近期贷款总额450,000!</a><br/><a href="Dqdc" class="label label-info">利息收入8000元!</a>
+							</blockquote>
+							<blockquote>
+								<span>奖励激励信息</span><br/><a href="Dqdc" class="label label-success">这月成功晋级为高级客户经理！</a>
+							</blockquote>
+							<blockquote>
+								<span>问责通知</span><br/><a href="Dqdc" class="label label-important">这月迟到3小时，通报批评！</a>
+							</blockquote>
+						</div>
+					</div>
+				</div><!--/content -->
+				<iframe frameborder="0" width="100%" height="380" id="content_frame" src="change_password" style="display:none;"></iframe>
+			</div><!--/span-->
+		</div><!--/row-->		
+    </div><!--/.fluid-container-->		
+ <!-- Button trigger modal -->
+<!--**************************************************foot***********************************************-->
+	<div class="footer">
+		<p class="pull-center">@ 2014 CardPay (Shanghai) Info Tech Co.,Ltd</p>
+		<span id="date" class="pull-right"></span>
+	</div>	
+
+	<!-- 注销 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">提示</h4>
+				</div>
+				<div class="modal-body">
+					您确定要退出系统吗？
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<a href="logout" class="btn btn-danger">确定</a>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<script src="../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>	
+	<script src="../../static/js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="../static/js/script.js"></script>
+	
+</body>
+</html>
