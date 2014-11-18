@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>XMCI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="/static/css/bootstrap.css" rel="stylesheet">
+	<link href="/static/css/main.css" rel="stylesheet">	
+	<link href="/static/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<style type="text/css">	
+		.tip-info{border:1px solid #dedede;border-radius:5px;padding:10px;width:95%;height:250px;overflow:auto;margin-bottom:20px;box-shadow:0 0 5px #ddd;}
+		.tip-head{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #dddddd;font-size:17px;font-weight:bold;color:#666666}
+		.tip-info .pull-right{cursor:pointer;width:90px;}
+		.tip-info .pull-right img{margin-top:-4px;}
+		blockquote{font-family:微软雅黑;font-size:16px;}
+		blockquote span{font-size:16px;}
+		q:before, q:after, blockquote:before, blockquote:after {content:none;}
+	</style>
+</head>
+
+<body onload="">	
+	<div class="content">
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">客户经理管理</a>/<a href="#">客户经理信息管理</a>/<a href="#">个人信息</a>
+		</div>	
+		<div class="tip-info" style="width:30%;float:left;margin-right:1%;">
+			<div class="tip-head">&nbsp;&nbsp;&nbsp;&nbsp;授信信息</div>
+			<div style="width:32%;float:left;">
+				<img src="/static/img/head/wx.jpg" class="img-circle" style="width:90px;box-shadow:1px 1px 10px #ccc;">
+			</div>
+			<div style="width:67%;float:left;">
+				<blockquote style="line-height:30px;">
+					员工号：02<br/>
+					员工名称：吉利<br/>			
+					职位：客户经理<br/>		
+					在职时间：2年<br/>
+					所属单位：农商行<br/>
+					授信权限：<b style="color:#6fb3e0">50万</b>
+				</blockquote>
+			</div>
+		</div>
+		<div class="tip-info"  style="width:30%;float:left;margin-right:1%;">			
+			<div class="tip-head">&nbsp;&nbsp;&nbsp;&nbsp;奖励激励信息</div>
+			<div style="height:205px;overflow:auto;">
+				<blockquote style="border:none;text-align:center;">
+					<img src="/static/img/xl1.png" style="width:270px;"/>
+				</blockquote>	
+				<blockquote style="border-color:#9abc32;">
+					这月成功晋级为高级客户经理！<br/><span class="label"><i class="icon-calendar icon-white"></i>2014-06-10</span>
+				</blockquote>
+				<blockquote style="border-color:#9abc32;">
+					这月任务超额完成，奖励2000元！<br/><span class="label"><i class="icon-calendar icon-white"></i>2014-06-16</span>
+				</blockquote>
+				<blockquote style="border-color:#9abc32;">
+					这月任务超额完成，奖励2000元！<br/><span class="label"><i class="icon-calendar icon-white"></i>2014-06-16</span>
+				</blockquote>
+			</div>
+		</div>
+		<div class="tip-info"  style="width:30%;float:left;margin-right:1%;">		
+			<div class="tip-head">&nbsp;&nbsp;&nbsp;&nbsp;问责信息</div>
+			<div style="height:205px;overflow:auto;">	
+				<blockquote style="border:none;text-align:center;">
+					<img src="/static/img/xl2.png" style="width:270px;"/>
+				</blockquote>								
+				<blockquote style="border-color:#d53f40;">
+					这月迟到4次通报批评！<br/><span class="label"><i class="icon-calendar icon-white"></i>2014-06-10</span>
+				</blockquote>
+			</div>
+		</div>
+		<div class="tip-info"  style="width:96%;height:auto;float:left;margin-right:1%;">		
+			<div class="tip-head">&nbsp;&nbsp;&nbsp;&nbsp;风险保证金信息</div>	
+			<table class="table-list">				
+				<tr>	
+					<th width="20%">操作月份</th>
+					<th width="20%">员工名称</th>
+					<th width="20%">金额</th>
+					<th width="20%">操作类型</th>
+					<th width="20%">剩余保证金</th>
+				</tr>	
+				<tr class="center" onclick="changeColor(this)">
+					<td width="20%">2014-02</td>		
+					<td width="20%">吉利</td>		
+					<td width="20%">1000</td>
+					<td width="20%">缴纳保证金</td>
+					<td width="20%">2000</td>						
+				</tr>
+				<tr class="center" onclick="changeColor(this)">
+					<td>2014-03</td>		
+					<td>吉利</td>			
+					<td>1000</td>
+					<td>缴纳保证金</td>
+					<td>3000</td>						
+				</tr>								
+			</table>
+		</div>
+	</div>
+	<script src="/static/js/jquery-1.7.2.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>	
+	<script src="/static/js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="/static/js/script.js"></script>
+	<script>
+ $('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})
+</script>
+</body>
+</html>

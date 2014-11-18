@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<!-- ************************验证样式************************-->
+	<script src="../../../static/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="../../../static/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="">	
+	<div class="content">
+		<div class="row-fluid">
+			<i class="icon-bookmark"></i><span class="titletip">当前申请的是性</span>
+			<table class="table-list">
+				<tr class="center">
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否可疑</td>
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否可疑</td>
+				</tr>
+				<tr>
+					<td class="table-label">年龄</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">收入</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">单位地址</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">家庭地址</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">邮寄地址</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">电话号码</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">电话号码归属地</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label"></td>
+					<td class="center"></td>
+				</tr>
+			</table>
+			<i class="icon-bookmark"></i><span class="titletip">与历史申请信息匹配</span>
+			<table class="table-list">
+				<tr class="center">
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否可疑</td>
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否可疑</td>	
+				</tr>
+				<tr>
+					<td class="table-label">姓名相同，地址相同,出生日期</td>
+					<td class="center"><span class="label label-important">是</span></td>					
+					<td class="table-label">手机号码相同\不同的申请人和地址</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">同一申请人\不同的地址和电话</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">电子邮件地址相同\不同的申请人和地址</td>
+					<td class="center"><span class="label label-important">是</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">当前公司电话与历史申请中的家庭电话相同</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">具有相同家庭地址的相同申请者，工作单位不同</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">多次申请：同一申请人6个月内超过4次申请</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">主附卡信息可疑</td>
+					<td class="center"></td>
+				</tr>
+				<tr>
+					<td class="table-label">当前的主卡申请者作为历史申请件中的副卡申请者出现，但历史申请件中的主卡申请者并不是当前申请件中的副卡申请者</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label"></td>
+					<td class="center"></td>
+				</tr>
+			</table>
+			<i class="icon-bookmark"></i><span class="titletip">与已知的可疑、欺诈案件匹配</span>
+			<table class="table-list">
+				<tr class="center">
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否匹配</td>
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否匹配</td>
+				</tr>
+				<tr>
+					<td class="table-label">相同的身份证件号码</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">相同的姓名和生日</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">相同的手机号码</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">相同的工作单位</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">相同的住宅地址或单位地址</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label"></td>
+					<td class="center"></td>
+				</tr>
+			</table>
+			<i class="icon-bookmark"></i><span class="titletip">与其他增值数据匹配</span>
+			<table class="table-list">
+				<tr class="center">
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否匹配</td>
+					<td class="table-label">检验事项</td>
+					<td class="table-label">是否匹配</td>
+				</tr>
+				<tr>
+					<td class="table-label">伪冒的身份证件号码</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label">虚假的学历信息</td>
+					<td class="center"><span class="label label-success">否</span></td>
+				</tr>
+				<tr>
+					<td class="table-label">固定电话与住址不匹配</td>
+					<td class="center"><span class="label label-success">否</span></td>					
+					<td class="table-label"></td>
+					<td class="center"></td>
+				</tr>
+			</table>
+		</div><!--/row-fluid -->
+	</div><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/script.js"></script>
+</body>
+</html>

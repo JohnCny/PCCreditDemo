@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<!-- ************************验证样式************************-->
+	<script src="../../../static/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="../../../static/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="">	
+	<div class="content">
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">客户管理</a>/<a href="#">客户维护信息管理</a>/<a href="#">客户维护信息查询</a>
+		</div>	
+		<form class="row-fluid">			
+			<table class="table-list">
+				<tr>						
+					<td class="table-label">客户名称</td>
+					<td>王军忠</td>
+					<td class="table-label">调查岗</td>
+					<td>倪文斌</td>
+				</tr>				
+			</table>
+			<i class="icon-bookmark"></i><span class="titletip">客户维护信息</span>
+			<table class="table-list">
+				<tr>			
+					<th>资料分类</th>	
+					<th>资料名称</th>	
+					<th style="width:90px;">资料是否齐全</th>	
+					<th>资料名称</th>	
+					<th style="width:90px;">资料是否齐全</th>	
+				</tr>	
+				<tr>	
+					<td class="table-label"><b>授信资料</b></td>
+					<td>授信审批单</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>“灵活金”相关账户（信用卡、绑定借记卡复印件）</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td class="table-label" rowspan="3"><b>调查报告</b></td>
+					<td>客户基本情况分析表</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>消费能力调查表</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>		
+				<tr>			
+					<td>库存清单</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>固定资产清单</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>		
+				<tr>				
+					<td>应收账款清单</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>应付账款清单</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>	
+					<td class="table-label" rowspan="11"><b>借款人资料</b></td>
+					<td>申请表*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>借款人身份证件</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>				
+					<td>身份联网核查*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>户口本、结婚证等其他个人证件</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>借款人信用报告、配偶征信查询授权书及信用报告*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>法院核查（个人及企业）*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>				
+					<td>资金用途承诺书*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>廉洁承诺函*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>个人资产（房产车产）及确权查询*，必须打印行驶证最新检验有效期*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>银行流水等其他资产</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>借款人工作收入证明资料</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>营业执照及工商信息查询*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>			
+					<td>税务登记证及完税证明书或纳税证明书</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>组织机构代码证、开户许可证、贷款卡</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>				
+					<td>公司章程、验证报告、股权转让书、变更备案资料等其他证明文件</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>法定代表人（和被授托人）身份证</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>				
+					<td>法定代表人证明书（和授权委托书）原件</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>企业概况表（附法定代表人简介）</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>车辆营运证（即道路运输证）、道路运输经营许可证、车险及相关驾驶人员的驾驶证、从业资格证等</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>烟草专卖零售许可证（个体）、进出口许可证等其他特种行业经营许可证</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>贷款用途资料</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td></td>
+					<td></td>
+				</tr>				
+				<tr>	
+					<td class="table-label" rowspan="5"><b>担保人资料</b></td>
+					<td>担保人身份证件</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>身份联网核查*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>户口本、结婚证等其他个人证件</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>担保人征信查询授权书及信用报告*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>法院核查（个人及企业）*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>担保函*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>担保人资产证明件及确权查询*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>担保人营业执照/工作收入证明</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>担保人其他材料</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td></td>
+					<td></td>
+				</tr>			
+				<tr>	
+					<td class="table-label" rowspan="5"><b>其他材料</b></td>
+					<td>经营场地租赁合同/租金收据</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>居住房屋租赁合同/租金收据</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>生产经营购销合同</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>销售单据或销售统计表</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>生产用原材料或商品采购单据或进货统计表</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>	
+					<td>水电费及其他杂费</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>工程机械的发票</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>现场调查稿纸</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+				<tr>					
+					<td>借款人其他资料</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>
+					<td>亲访照片*</td>
+					<td><label><input type="radio"/>是</label><label><input type="radio"/>否</label></td>				
+				</tr>
+			</table>
+			<input type="submit" class="btn btn-info" value="提交"/>
+		</form><!--/row-fluid -->
+	</div><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>XMCI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../static/css/main.css" rel="stylesheet">
+
+	<style type="text/css">
+		html{overflow-y:scroll;}  
+		*{font-family:myfont1;}
+		#date{line-height:25px;font-size:14px;color:gray;margin-top:-30px;}
+		#text{background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;top:0;z-index:1000000;display:none;}		
+		.nav-list .nav-header,.nav-list > li > a{margin-right: -20px;margin-left: -20px;}
+	</style>
+</head>
+
+<body onload="showdate();">
+<!--**************************************************top***********************************************-->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">				
+				<a class="brand" href="javascript:void(0);" onclick="iframe('welcome_zg')">农商行微贷系统</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-right">
+						<li class="dropdown">
+							<a href="javascript:void(0);" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-user"></i>&nbsp;主管<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+								<li><a href="javascript:void(0);" onclick="changeiframe('change_password');">修改密码</a></li>
+								<li class="divider"></li>
+								<li><a href="logout">注销</a></li>
+							</ul>
+						</li>
+					</ul>					
+					<ul class="nav" id="topmenu">
+						<li 
+							{%- if menu == "jjgl_zg"%}
+								class="active"
+							{%- endif %}
+							onclick="iframe('jjgl_zg')"><a href="javascript:void(0);">进件管理</a></li>	
+						<li 
+							{%- if menu == "yxgl_zg"%}
+								class="active"
+							{%- endif %}
+							onclick="iframe('yxgl_zg')"><a href="javascript:void(0);">营销管理</a></li>	
+						<li 
+							{%- if menu == "khgl_zg"%}
+								class="active"
+							{%- endif %}
+							onclick="iframe('khgl_zg')"><a href="javascript:void(0);">客户管理</a></li>	
+						<li
+							{%- if menu == "zhfkgl_zg"%}
+								class="active"
+							{%- endif %}
+							onclick="iframe('zhfkgl_zg')"><a href="javascript:void(0);">综合风险管理</a></li>
+						<li 
+							{%- if menu == "khjlgl_zg"%}
+								class="active"
+							{%- endif %}
+							onclick="iframe('khjlgl_zg')"><a href="javascript:void(0);">客户经理管理</a></li>						
+						<li
+							{%- if menu == "xtgl_zg"%}
+								class="active"
+							{%- endif %}
+							onclick="iframe('xtgl_zg')"><a href="javascript:void(0);">系统管理</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</div><!--/.navbar-inner -->
+	</div><!--/.navbar -->
+<!--**************************************************left***********************************************-->
+    <div class="container-fluid" style="margin:55px auto 0;">
+		<div class="row-fluid">
+			<div class="span2" style="">
+				<div class="well sidebar-nav" id="leftmenu">
+					<ul class="nav nav-list 
+							{%- if menu != "jjgl_zg" %}
+								hidden
+							{%- endif %}
+							" id="jjgl_zg">	
+						<li class="nav-header">进件信息</li>
+						<li onclick="leftmenu(this);changeiframe('Jjgl/jjxx/jjcx')" id="" class="active">
+							<a href="javascript:void(0);">进件查询</a>
+						</li>
+						<!--<li class="nav-header">客户筛选</li>	
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khsx/khsx')" id="">
+							<a href="javascript:void(0);">客户筛选</a>
+						</li>
+						<li class="nav-header">多渠道数据采集</li>	
+						<li onclick="leftmenu(this);changeiframe('Jjgl/dqdsjcj/plkhsjlr')" id="">
+							<a href="javascript:void(0);">批量客户数据录入</a>
+						</li>
+						 <li class="nav-header">客户营销管理</li>						
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxgzgl')" id="">
+							<a href="javascript:void(0);">营销计划规则维护</a>
+						</li>		
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxjhgl')" id="">
+							<a href="javascript:void(0);">营销计划管理</a>
+						</li>						
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxjhss')" id="" >
+							<a href="javascript:void(0);">营销计划实施管理<span class="badge badge-important">6</span></a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('')" id="" >
+							<a href="javascript:void(0);">营销计划实施管理</a>
+						</li> 
+						<li class="nav-header">客户分案</li>	
+						<!-- <li onclick="leftmenu(this);changeiframe('Jjgl/khfa/khfa')" id="">
+							<a href="javascript:void(0);">客户分案</a>
+						</li> 
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khfa/yxkhqzfa')" id="">
+							<a href="javascript:void(0);">营销客户强制分案</a>
+						</li>-->
+						<li class="nav-header">审核审批</li>						
+						<li onclick="leftmenu(this);changeiframe('Jjgl/shsp/dspjj')" id="">
+							<a href="javascript:void(0);">待审批进件</a>
+						</li>
+						<!-- <li class="nav-header">当前贷款信息查询</li>						
+						<li onclick="leftmenu(this);changeiframe('Jjgl/dqdkxxcx/sqjdcx')" id="">
+							<a href="javascript:void(0);">申请进度查询</a>
+						</li> -->
+						<li class="nav-header">审核风险客户</li>						
+						<li onclick="leftmenu(this);changeiframe('Jjgl/fxkhgl/fxkhsh')" id="">
+							<a href="javascript:void(0);">风险客户审核</a>
+						</li>
+					</ul>
+					<ul class="nav nav-list 
+							{%- if menu != "yxgl_zg" %}
+								hidden
+							{%- endif %}
+							" id="yxgl_zg">	
+						<li class="nav-header">客户营销管理</li>							
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khsx/khsx')" id="" class="active">
+							<a href="javascript:void(0);">客户筛选</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxgzgl')" id="">
+							<a href="javascript:void(0);">营销计划规则维护</a>
+						</li>		
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxjhgl')" id="">
+							<a href="javascript:void(0);">营销计划管理</a>
+						</li>						
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxjhss')" id="" >
+							<a href="javascript:void(0);">营销计划实施管理<span class="badge badge-important">6</span></a>
+						</li>
+					</ul>
+					<ul class="nav nav-list 
+							{%- if menu != "khgl_zg" %}
+								hidden
+							{%- endif %}
+							" id="khgl_zg">						
+						<li class="nav-header">客户原始资料管理</li>						
+						<li onclick="leftmenu(this);changeiframe('Khgl/khyszlgl/yszllr')" id=""  class="active">
+							<a href="javascript:void(0);">客户申请资料录入</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khyszlgl/yszlcx')" id="">
+							<a href="javascript:void(0);">客户原始资料查询</a>
+						</li>											
+						<li class="nav-header">客户分案</li>
+						<li onclick="leftmenu(this);changeiframe('Jjgl/jjxx/jgntjjj')" id="">
+							<a href="javascript:void(0);">机构内移交进件</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Jjgl/jjxx/kzxtjjj')" id="">
+							<a href="javascript:void(0);">向卡中心移交进件</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Jjgl/jjxx/fpjj')" id="">
+							<a href="javascript:void(0);">分配进件</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khfa/yxkhfa')" id="">
+							<a href="javascript:void(0);">营销客户分案</a>
+						</li>						
+						<li onclick="leftmenu(this);changeiframe('Khgl/khfa/clkhfa')" id="">
+							<a href="javascript:void(0);">存量客户分案</a>
+						</li>						
+						<li onclick="leftmenu(this);changeiframe('Khgl/khfa/qzfa')" id="">
+							<a href="javascript:void(0);">强制分案</a>
+						</li>
+						<li class="nav-header">客户维护信息管理</li>
+						<!-- <li onclick="leftmenu(this);changeiframe('Khgl/whxxgl/whxxcj')" id="" >
+							<a href="javascript:void(0);">客户维护信息采集</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/whxxgl/whxx_search')" id="" >
+							<a href="javascript:void(0);">客户维护信息查询</a>
+						</li> -->
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhxxgl/khwhbgcx')" id="">
+							<a href="javascript:void(0);">客户维护报告</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhxxgl/edsh')" id="" >
+							<a href="javascript:void(0);">额度审核</a>
+						</li>
+						<!-- <li class="nav-header">客户评估信息管理</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/pgxxgl/edgl')" id="" >
+							<a href="javascript:void(0);">额度管理</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/pgxxgl/zxxx')" id="" >
+							<a href="javascript:void(0);">征信信息</a>
+						</li> -->
+						<li class="nav-header">客户维护管理</li>						
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhgl/khwhjhgz')" id="" >
+							<a href="javascript:void(0);">客户维护计划规则</a>
+						</li>				
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhgl/khwhjhwh')" id="" >
+							<a href="javascript:void(0);">客户维护计划维护</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhgl/khwhtz')" id="" >
+							<a href="javascript:void(0);">客户维护台账</a>
+						</li>
+						<!-- <li onclick="leftmenu(this);changeiframe('Khgl/khwhgl/khxxqdgl')" id="" >
+							<a href="javascript:void(0);">客户信息渠道管理</a>
+						</li> -->					
+						<li class="nav-header">渠道管理</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/khxxqdcx')" id="" >
+							<a href="javascript:void(0);">客户信息渠道查询</a>
+						</li><!-- 
+						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/xxyqd')" id="" >
+							<a href="javascript:void(0);">信息员渠道</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/qtqd')" id="" >
+							<a href="javascript:void(0);">其他渠道</a>
+						</li> -->
+						<li class="nav-header">客户交易信息管理</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khjyxxgl/fxjyfxgzgl')" id="" >
+							<a href="javascript:void(0);">风险交易分析规则管理</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khjyxxgl/jyfxsjfx')" id="" >
+							<a href="javascript:void(0);">交易风险数据分析</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khjyxxgl/gxdsjfx')" id="" >
+							<a href="javascript:void(0);">贡献度数据分析</a>
+						</li>
+					</ul>
+					<ul class="nav nav-list 
+							{%- if menu != "zhfkgl_zg" %}
+								hidden
+							{%- endif %}
+							" id="zhfkgl_zg">
+						<li class="nav-header">催收管理</li>						
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/yqkhcx')" id=""  class="active">
+							<a href="javascript:void(0);">逾期客户查询</a>
+						</li>					
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/yqkhcs')" id="">
+							<a href="javascript:void(0);">逾期客户催收</a>
+						</li>					
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/yqkhzlcx')" id="">
+							<a href="javascript:void(0);">逾期客户资料查询</a>
+						</li>								
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/khcsjhwh')" id="">
+							<a href="javascript:void(0);">客户催收计划维护</a>
+						</li>	
+						<!-- <li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/csjh')" id="">
+							<a href="javascript:void(0);">客户催收计划</a>
+						</li> -->							
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/khcstzcx')" id="">
+							<a href="javascript:void(0);">客户催收台账查询</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/khcstzwh')" id="">
+							<a href="javascript:void(0);">客户催收台账维护</a>
+						</li><!-- 
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/csjhss')" id="">
+							<a href="javascript:void(0);">催收计划实施</a>
+						</li> -->
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/csjhqzyj')" id="">
+							<a href="javascript:void(0);">催收案件强制移交(机构内)</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/csajyj')" id="">
+							<a href="javascript:void(0);">催收案件移交(卡中心)</a>
+						</li>
+						<li class="nav-header">风险事项管理</li>						
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/fxsxcx')" id="">
+							<a href="javascript:void(0);">风险事项查询</a>
+						</li>	
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/fxxxgl')" id="">
+							<a href="javascript:void(0);">风险信息管理</a>
+						</li>			
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/fxsxsp')" id="">
+							<a href="javascript:void(0);">风险事项审批</a>
+						</li>		
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/fxsxtg')" id="">
+							<a href="javascript:void(0);">风险事项通告</a>
+						</li>
+						<li class="nav-header">风险名单管理</li>
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/tjfxmd')" id="">
+							<a href="javascript:void(0);">提交风险名单</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/fxmdspwh')" id="">
+							<a href="javascript:void(0);">风险名单审批维护</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/ylhmd')" id="">
+							<a href="javascript:void(0);">银联黑名单</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/nbgfxmd')" id="">
+							<a href="javascript:void(0);">内部高风险名单</a>
+						</li>	
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/zdyfxgz')" id="">
+							<a href="javascript:void(0);">自定义分析规则</a>
+						</li>	
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/fxjycx')" id="">
+							<a href="javascript:void(0);">风险交易查询</a>
+						</li>		
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/fxjywhjh')" id="">
+							<a href="javascript:void(0);">风险交易维护计划</a>
+						</li>		
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/gfxmdgl/fxjywhtz')" id="">
+							<a href="javascript:void(0);">风险交易维护台账</a>
+						</li>						
+						<li class="nav-header">不良资产管理</li>
+						<!--  <li onclick="leftmenu(this);changeiframe('')" id="">
+							<a href="javascript:void(0);">核销规则维护</a>
+						</li> -->
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/blzcgl/hxlcgl')" id="">
+							<a href="javascript:void(0);">核销流程管理</a>
+						</li> 
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/blzcgl/blzchxfq')" id="">
+							<a href="javascript:void(0);">不良资产核销发起</a>
+						</li> 
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/blzcgl/blzchxgzwh')" id="">
+							<a href="javascript:void(0);">不良资产核销规则维护</a>
+						</li> 
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/blzcgl/zdyfxgz')" id="">
+							<a href="javascript:void(0);">自定义分析规则</a>
+						</li> 
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/blzcgl/blzcgl')" id="" >
+							<a href="javascript:void(0);">不良资产管理</a>
+						</li>
+					</ul>
+					<ul class="nav nav-list 
+							{%- if menu != "khjlgl_zg" %}
+								hidden
+							{%- endif %}
+							" id="khjlgl_zg">
+						<!-- <li class="nav-header">客户经理信息管理</li>						
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/xxgl/jbxx_search')" id=""  class="active">
+							<a href="javascript:void(0);">基本信息</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/xxgl/td_search')" id="">
+							<a href="javascript:void(0);">所辖团队管理</a>
+						</li>	
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/xxgl/sxxx_search')" id="">
+							<a href="javascript:void(0);">授信信息</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/xxgl/jljlxx_search')" id="">
+							<a href="javascript:void(0);">奖励激励信息</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/xxgl/wzxx_search')" id="">
+							<a href="javascript:void(0);">问责信息</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/xxgl/fxbzjxx_search')" id="">
+							<a href="javascript:void(0);">风险保证金信息</a>							
+						</li>
+						<li class="nav-header">员工评估考核</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/ygpgkh/pxqpglist')" id="pxqpg" class="active">
+							<a href="javascript:void(0);">培训期评估</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/ygpgkh/zgpglist')" id="zgpg">
+							<a href="javascript:void(0);">在岗评估</a>
+						</li> -->
+						<li class="nav-header">客户经理管理参数维护</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlglcswh/cswh')" id="" class="active">
+							<a href="javascript:void(0);">参数维护</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlglcswh/khjlcjgl')" id="">
+							<a href="javascript:void(0);">层级维护</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlglcswh/pjgzgl')" id="">
+							<a href="javascript:void(0);">评价规则维护</a>
+						</li>						
+						<!-- <li onclick="leftmenu(this);changeiframe('Khjlgl/khjlglcswh/khjljjshgz')" id="">
+							<a href="javascript:void(0);">客户经理晋级审核规则</a>
+						</li>  -->
+						<!-- <li onclick="leftmenu(this);changeiframe('')" id="">
+							<a href="javascript:void(0);">所属机构维护</a>
+						</li>  -->
+						<li class="nav-header">客户经理日常维护</li>						
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlrcwh/khjlzlwh')" id="">
+							<a href="javascript:void(0);">客户经理资料维护</a>
+						</li>				
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlrcwh/whtzcx')" id="">
+							<a href="javascript:void(0);">维护台帐查询</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlrcwh/khjlgltz')" id="">
+							<a href="javascript:void(0);">管理台帐</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlrcwh/khjlzpxgl')" id="">
+							<a href="javascript:void(0);">培训管理</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlrcwh/fxjss')" id="">
+							<a href="javascript:void(0);">风险警示书</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlrcwh/wzgl')" id="">
+							<a href="javascript:void(0);">问责管理</a>
+						</li>						
+						<li class="nav-header">客户经理信息管理</li>		
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/khjlList')" id="">
+							<a href="javascript:void(0);">客户经理信息</a>
+						</li>				
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/khedgl')" id="">
+							<a href="javascript:void(0);">客户额度管理</a>
+						</li>
+					</ul>										
+					<ul class="nav nav-list 
+							{%- if menu != "xtgl_zg"%}
+								hidden
+							{%- endif %}
+							" id="xtgl_zg">
+						<li class="nav-header">系统管理</li>
+						<li onclick="leftmenu(this);changeiframe('')" id="" class="active">
+							<a href="javascript:void(0);">问责规则管理</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('')" id="">
+							<a href="javascript:void(0);">不良资产核销规则管理</a>
+						</li>
+						<!-- <li onclick="leftmenu(this);changeiframe('System/ywcspz')" id="ywcspz" class="active">
+							<a href="javascript:void(0);">业务参数配置</a>
+						</li>	
+						<li onclick="leftmenu(this);changeiframe('System/jkpz')" id="jkpz" >
+							<a href="javascript:void(0);">接口配置</a>
+						</li>		
+						<li onclick="leftmenu(this);changeiframe('System/rzrj')" id="rzrj" >
+							<a href="javascript:void(0);">日终日结</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('System/sjzd')" id="sjzd" >
+							<a href="javascript:void(0);">数据字典</a>
+						</li>			
+						<li onclick="leftmenu(this);changeiframe('System/jggl')" id="jggl" >
+							<a href="javascript:void(0);">机构管理</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('System/syzgl')" id="syzgl" >
+							<a href="javascript:void(0);">使用者管理</a>
+						</li>		
+						<li onclick="leftmenu(this);changeiframe('System/jsqxgl')" id="jsqxgl" >
+							<a href="javascript:void(0);">角色权限管理</a>
+						</li>	-->
+					</ul>
+				</div><!--/.well -->					
+			</div><!--/span-->
+<!--**************************************************content***********************************************-->
+			<div class="span10 pull-right">
+				<iframe frameborder="0" 
+					{%- if menu == "jjgl_zg" %}
+						src="Jjgl/jjxx/jjcx"						
+					{%- elif menu == "yxgl_zg" %}
+						src="Jjgl/khsx/khsx"
+					{%- elif menu == "khgl_zg" %}
+						src="Khgl/khyszlgl/yszllr"					
+					{%- elif menu == "zhfkgl_zg" %}
+						src="Zhfxgl/csgl/yqkhcx"	
+					{%- elif menu == "khjlgl_zg" %}
+						src="Khjlgl/khjlglcswh/khjlcjgl"							
+					{%- endif %}
+				width="100%;" id="content_frame" marginheight="0" marginwidth="0" height="100%" onload="resizeFrame('content_frame')"></iframe>
+			</div><!--/span-->
+		</div><!--/row-->		
+    </div><!--/.fluid-container-->		
+<!--**************************************************foot***********************************************-->
+	<div class="footer">
+		<p class="pull-center">@ 2013 CardPay (Shanghai) Info Tech Co.,Ltd</p>
+		<span id="date" class="pull-right"></span>
+	</div>
+	<div id="text">	
+		
+	</div>
+	<script src="../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/script.js"></script>
+</body>
+</html>

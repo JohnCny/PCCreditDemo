@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<!-- ************************验证样式************************-->
+	<script src="../../../static/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="../../../static/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="datepicker();setTimeOut();">	
+	<div class="content">
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">综合风险管理</a>/<a href="#">风险事项管理</a>/<a href="#">风险事项上传</a>
+		</div>			
+		<div class="row-fluid">
+			<i class="icon-bookmark"></i><span class="titletip">风险事项上传</span>			
+			<form>				
+				<table class="table-list">
+					<tr>						
+						<td class="table-label">风险事项描述</td>	
+						<td><input type="text" value="信息不符"/></td>
+					</tr>
+					<tr>
+						<td class="table-label">风险事项等级</td>	
+						<td>
+							<select>
+								<option>一级</option>
+								<option>二级</option>
+								<option>三级</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-label">信息渠道</td>	
+						<td>
+							<select>
+								<option>电视媒体</option>
+								<option>报刊杂志</option>
+								<option>网络</option>
+								<option selected>行内信息</option>
+							</select>
+						</td>
+					</tr>	
+				</table>
+				<input type="button" class="btn btn-info" value="提交"/>
+			</form>
+		</div><!--/row-fluid -->
+	</div><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/script.js"></script>
+</body>
+</html>

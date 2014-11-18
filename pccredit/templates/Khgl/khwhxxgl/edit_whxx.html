@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<style type="text/css">	
+		textarea{width:80%;}
+		input.btn-mini{width:20px;position:relative;top:-5px;display:inline-block;}
+	</style>	
+</head>
+
+<body onload="datepicker()">	
+	<form class="content">			
+		<div class="row-fluid">
+			<div class="well place">			
+				<i class="icon-home"></i><a href="#">客户管理</a>/<a href="#">客户维护信息管理</a>/<a href="#">客户维护信息录入</a>
+			</div>	
+			<i class="icon-bookmark"></i><span class="titletip">维护信息</span>
+			<div class="divBorder">				
+				<table class="table-list">		
+					<tr>
+						<td class="table-label">客户名称</td>
+						<td><input type="text" name="" value="王军忠" readonly="true"/></td>
+						<td class="table-label">维护时间</td>	
+						<td><input type="text" name="" class="datepicker" value="2014-06-03" data-date-format="yyyy-mm-dd" readonly/></td>
+						<td class="table-label">维护地点</td>	
+						<td><input type="text" name="" value=""/></td>
+						<td class="table-label">维护方式</td>	
+						<td>
+							<select>
+								<option>实地维护</option>
+								<option>非实地维护</option>
+							</select>
+						</td>
+					</tr>	
+				</table>
+			</div>
+			<!--*****************************************检测记录**************************************************-->
+			<i class="icon-bookmark"></i><span class="titletip">还款能力</span>
+			<!-- <input type="button" value="+" onclick="addTd('jcjl','content_frame')" class="btn btn-info btn-mini"/>
+			<input type="button" value="-" onclick="removeTd('jcjl','content_frame')" class="btn btn-info btn-mini"/> -->
+			<div class="divBorder">
+				<table id="jcjl" class="table-list">
+					<tr>					
+						<th colspan="2">经营收入情况</th>	
+						<th colspan="2">常态费用支出</th>	
+						<th colspan="2">非常态大额支出</th>							
+					</tr>
+					<tr class="center">				
+						<td><input type="text" name="" value="良好"/></td>
+						<td><input type="text" name="" value="良好"/></td>
+						<td><input type="text" name="" value="正常"/></td>
+						<td><input type="text" name="" value="正常"/></td>		
+						<td><input type="text" name="" value="无"/></td>
+						<td><input type="text" name="" value="无"/></td>
+					</tr>
+				</table>
+			</div>
+			<i class="icon-bookmark"></i><span class="titletip">还款意愿</span>
+			<div class="divBorder">
+				<table id="jcjl" class="table-list">
+					<tr>					
+						<th colspan="2">每月还款情况</th>	
+						<th colspan="2">其他负债情况</th>	
+						<th colspan="2">个人风险情况</th>							
+					</tr>
+					<tr class="center">				
+						<td><input type="text" name="" value="正常还款"/></td>
+						<td><input type="text" name="" value="正常还款"/></td>
+						<td><input type="text" name="" value="暂无负债"/></td>
+						<td><input type="text" name="" value="暂无负债"/></td>		
+						<td><input type="text" name="" value="正常"/></td>
+						<td><input type="text" name="" value="正常"/></td>
+					</tr>
+				</table>
+			</div>
+			<i class="icon-bookmark"></i><span class="titletip">行业情况</span>
+			<div class="divBorder">
+				<table id="jcjl" class="table-list">
+					<tr>					
+						<th colspan="2">景气情况</th>	
+						<th colspan="2">行业利润率</th>	
+						<th colspan="2">行业风险</th>							
+					</tr>
+					<tr class="center">				
+						<td><input type="text" name="" value="今年行业较稳定"/></td>
+						<td><input type="text" name="" value="今年行业较稳定"/></td>
+						<td><input type="text" name="" value="30%-50%"/></td>
+						<td><input type="text" name="" value="35%-50%"/></td>		
+						<td><input type="text" name="" value="5%-8%"/></td>
+						<td><input type="text" name="" value="5%-8%"/></td>
+					</tr>
+				</table>
+			</div>
+			<i class="icon-bookmark"></i><span class="titletip">道德品德</span>
+			<div class="divBorder">
+				<table id="jcjl" class="table-list">
+					<tr>					
+						<th colspan="2">家庭情况</th>	
+						<th colspan="2">子女父母情况</th>	
+						<th colspan="2">个人行为情况</th>							
+					</tr>
+					<tr class="center">				
+						<td><input type="text" name="" value="家庭和睦，无重大事件"/></td>
+						<td><input type="text" name="" value="无重大事件"/></td>
+						<td><input type="text" name="" value="良好"/></td>
+						<td><input type="text" name="" value="无疾病"/></td>		
+						<td><input type="text" name="" value="良好"/></td>
+						<td><input type="text" name="" value="良好"/></td>
+					</tr>
+				</table>
+			</div>
+			<i class="icon-bookmark"></i><span class="titletip">其他</span>
+			<div class="divBorder">
+				<table id="jcjl" class="table-list">
+					<tr>					
+						<th colspan="2">其他</th>						
+					</tr>
+					<tr class="center">				
+						<td><input type="text" name="" value="购置新车"/></td>
+						<td><input type="text" name="" value="购置新车"/></td>
+					</tr>
+				</table>
+			</div>
+			<input type="submit" class="btn btn-info" value="提交"/>
+		</div><!--/row-fluid -->
+	</form><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/script.js"></script>
+	<script src="../../../static/js/process.js"></script>
+	<script type="text/javascript">
+		var max=0;
+		var jegs=0;
+		var num=0;
+		var idCard=0;
+		var phone=0;
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<!-- ************************验证样式************************-->
+	<script src="../../../static/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="../../../static/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="datepicker();setTimeOut();">	
+	<div class="content">
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">客户经理管理</a>/<a href="#">客户经理信息管理</a>/<a href="#">日常管理信息</a>
+		</div>	
+		
+		<div class="row-fluid">
+			<i class="icon-bookmark"></i><span class="titletip">搜索</span>
+			<form>
+				<table class="table-list">
+					<tr>
+						<td class="table-label">客户经理编号</td>
+						<td>
+							<input type="text" name=""/>
+						</td>
+						<td class="table-label">客户经理姓名</td>
+						<td>
+							<input type="text" name=""/>						
+						</td>
+						<td class="table-label">客户经理所属机构</td>
+						<td>
+							<select name="">
+								<option>身份证</option>
+								<option>警官证</option>
+							</select>	
+						</td>						
+					</tr>
+				</table>
+				<input type="button" class="btn btn-info" value="搜索"/>													
+			</form>
+			<i class="icon-bookmark"></i><span class="titletip">客户经理列表</span>
+			<div>				
+				<table class="table-list">
+					<thead>
+						<tr>					
+							<th>客户经理编号</th>
+							<th>客户经理姓名</th>
+							<th>客户及管理性别</th>
+							<th>客户经理所属机构</th>	
+							<th>操作</th>	
+						</tr>
+					</thead>
+					<tbody class="center">						
+						<tr onclick="changeColor(this)">						
+							<td>01</td>	
+							<td>倪文斌</td>
+							<td>男</td>	
+							<td>总行</td>
+							<td><input type="button" class="btn btn-info" value="日常管理详情" onclick="Dialog()"/></td>	
+						</tr>	
+						<tr onclick="changeColor(this)">
+							<td>02</td>	
+							<td>吉利</td>
+							<td>男</td>	
+							<td>分行</td>
+							<td><input type="button" class="btn btn-info" value="日常管理详情" onclick="Dialog()"/></td>	
+						</tr>	
+						<tr onclick="changeColor(this)">
+							<td>03</td>	
+							<td>李丽</td>
+							<td>女</td>	
+							<td>分理处</td>
+							<td><input type="button" class="btn btn-info" value="日常管理详情" onclick="Dialog()"/></td>	
+						</tr>	
+					</tbody>
+				</table>
+			</div>
+			<div class="page-div">				
+				<span style="CURSOR: pointer">&lt;&lt;</span>
+				&#160;第&#160;<font color="#0088cc">1</font>&#160;页&#160;
+				&#160;共&#160;<font color="#0088cc">1</font>&#160;页&#160;
+				<span style="CURSOR: pointer">&gt;&gt;</span>
+			</div>
+		</div><!--/row-fluid -->
+	</div><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/script.js"></script>
+	<script type="text/javascript">
+		function Dialog(){		
+			var txt="<div class=topDiv >"+
+						"<img src='/static/img/close.png' class='close' onclick='$(\"#text\",window.parent.document).hide();'/><br/>"+
+						"<iframe frameborder='0' width='100%' marginheight='0' marginwidth='0' height='90%' src='Khjlgl/khjlxxgl/rcglxq' >"+
+					"</div>"	
+			$('#text',window.parent.document).html(txt);
+			$('#text',window.parent.document).show();
+		}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>小微贷款业务管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../../../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../static/css/main.css" rel="stylesheet">
+	<link href="../../../static/css/datepicker.css" rel="stylesheet">
+	<!-- ************************验证样式************************-->
+	<script src="../../../static/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="../../../static/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="datepicker();setTimeOut();">	
+	<div class="content">
+		<div class="well place">			
+			<i class="icon-home"></i><a href="#">客户经理管理</a>/<a href="#">客户经理日常维护</a>/<a href="#">管理台帐</a>
+		</div>	
+		
+		<div class="row-fluid">
+			<!-- 一级tab -->
+			<ul id="tags" class="tags">
+				<li class="selectTag"> 
+					<a onclick="selectTag('tagContent0',this);" href="javascript:void(0)">层级管理</a> 
+				</li>
+				<li >
+					<a onclick="selectTag('tagContent1',this);" href="javascript:void(0)">检查报告</a> 
+				</li>
+			</ul>
+			<!-- 一级content -->
+			<div id="tagContent" class="Content">
+<!-- *******************************************第二个标签的内容*************************************************** -->
+				<div class="tagContent selectTag" id="tagContent0">
+					<i class="icon-bookmark"></i><span class="titletip">客户经理层级信息</span>
+					<table class="table-list">
+						<thead>
+							<tr>					
+								<th>客户经理编号</th>
+								<th>客户经理名称</th>
+								<th>层级</th>
+							</tr>
+						</thead>
+						<tbody class="center">						
+							<tr onclick="changeColor(this)">						
+								<td>01</td>	
+								<td>倪文斌</td>
+								<td>
+									<select>
+										<option>客户经理</option>
+										<option>高级客户经理</option>
+										<option>客户经理主管</option>
+										<option>行长</option>
+									</select>
+								</td>	
+							</tr>	
+							<tr onclick="changeColor(this)">
+								<td>02</td>	
+								<td>吉利</td>
+								<td>
+									<select>
+										<option>客户经理</option>
+										<option selected>高级客户经理</option>
+										<option>客户经理主管</option>
+										<option>行长</option>
+									</select>
+								</td>		
+							</tr>	
+							<tr onclick="changeColor(this)">
+								<td>03</td>	
+								<td>李丽</td>
+								<td>
+									<select>
+										<option>客户经理</option>
+										<option>高级客户经理</option>
+										<option selected>客户经理主管</option>
+										<option>行长</option>
+									</select>
+								</td>	
+							</tr>	
+						</tbody>
+					</table><br/>
+				</div><!-- /第二个标签的内容 -->
+<!-- *******************************************第三个标签的内容*************************************************** -->
+				<div class="tagContent" id="tagContent1">	
+					<i class="icon-bookmark"></i><span class="titletip">客户经理列表</span>
+					<table class="table-list">
+						<thead>
+							<tr>					
+								<th>客户经理编号</th>
+								<th>客户经理名称</th>
+								<th>创建时间</th>
+								<th>修改前层级</th>
+								<th>修改后层级</th>
+								<th>修改人</th>
+								<th>修改时间</th>
+							</tr>
+						</thead>
+						<tbody class="center">						
+							<tr onclick="changeColor(this)">						
+								<td>01</td>	
+								<td>倪文斌</td>
+								<td>2014-01-01</td>
+								<td>客户经理</td>
+								<td>高级客户经理</td>
+								<td>李丽</td>
+								<td>2014-03-01</td>
+							</tr>
+						</tbody>
+					</table><br/>		
+				</div><!-- /第三个标签的内容 -->	
+			</div>
+		</div><!--/row-fluid -->
+	</div><!--/content -->
+	
+	<script src="../../../static/js/jquery-1.7.2.min.js"></script>
+	<script src="../../../static/js/bootstrap-datepicker.js"></script>
+	<script src="../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../static/js/script.js"></script>
+</body>
+</html>
