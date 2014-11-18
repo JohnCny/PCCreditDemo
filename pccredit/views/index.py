@@ -2,7 +2,7 @@
 
 from flask import Module,request, render_template,flash,redirect
 
-from myapp import app
+from pccredit import app
 # 登陆
 @app.route('/')
 @app.route('/login', methods=['GET', 'POST'])

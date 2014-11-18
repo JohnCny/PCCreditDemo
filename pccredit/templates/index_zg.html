@@ -30,7 +30,7 @@
 					<ul class="nav pull-right">
 						<li class="dropdown">
 							<a href="javascript:void(0);" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
-								<i class="icon-user"></i>&nbsp;主管<b class="caret"></b>
+								<i class="icon-user"></i>&nbsp;客户经理<b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
 								<li><a href="javascript:void(0);" onclick="changeiframe('change_password');">修改密码</a></li>
@@ -125,7 +125,10 @@
 						<li onclick="leftmenu(this);changeiframe('Jjgl/dqdkxxcx/sqjdcx')" id="">
 							<a href="javascript:void(0);">申请进度查询</a>
 						</li> -->
-						<li class="nav-header">审核风险客户</li>						
+						<li class="nav-header">审核风险客户</li>	
+						<li onclick="leftmenu(this);changeiframe('Jjgl/fxkhgl/sbfxkh')" id="">
+							<a href="javascript:void(0);">上报风险客户</a>
+						</li>					
 						<li onclick="leftmenu(this);changeiframe('Jjgl/fxkhgl/fxkhsh')" id="">
 							<a href="javascript:void(0);">风险客户审核</a>
 						</li>
@@ -139,6 +142,9 @@
 						<li onclick="leftmenu(this);changeiframe('Jjgl/khsx/khsx')" id="" class="active">
 							<a href="javascript:void(0);">客户筛选</a>
 						</li>
+						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxgzgl')" id="">
+							<a href="javascript:void(0);">营销规则管理</a>
+						</li>	
 						<li onclick="leftmenu(this);changeiframe('Jjgl/khyxgl/yxgzgl')" id="">
 							<a href="javascript:void(0);">营销计划规则维护</a>
 						</li>		
@@ -187,6 +193,18 @@
 						<li onclick="leftmenu(this);changeiframe('Khgl/whxxgl/whxx_search')" id="" >
 							<a href="javascript:void(0);">客户维护信息查询</a>
 						</li> -->
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhxxgl/whxxlr')" id="" >
+							<a href="javascript:void(0);">客户维护信息<!-- 录入 --></a>
+						</li>						
+						<li onclick="leftmenu(this);changeiframe('Jjgl/jjxx/jjdc')" id="" >
+							<a href="javascript:void(0);">进件调查<span class="badge badge-important">6</span></a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhxxgl/whxxcx')" id="" >
+							<a href="javascript:void(0);">客户维护信息查询</a>
+						</li>						
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhxxgl/sxedgl')" id="" >
+							<a href="javascript:void(0);">授信额度管理</a>
+						</li>
 						<li onclick="leftmenu(this);changeiframe('Khgl/khwhxxgl/khwhbgcx')" id="">
 							<a href="javascript:void(0);">客户维护报告</a>
 						</li>
@@ -200,7 +218,14 @@
 						<li onclick="leftmenu(this);changeiframe('Khgl/pgxxgl/zxxx')" id="" >
 							<a href="javascript:void(0);">征信信息</a>
 						</li> -->
-						<li class="nav-header">客户维护管理</li>						
+						<li class="nav-header">客户评估信息管理</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/khpgxxgl/khpgxxcx')" id="" >
+							<a href="javascript:void(0);">客户评估信息查询</a>
+						</li>
+						<li class="nav-header">客户维护管理</li>	
+						<li onclick="leftmenu(this);changeiframe('Khgl/khwhgl/khwhjh')" id="" >
+							<a href="javascript:void(0);">客户维护计划</a>
+						</li>					
 						<li onclick="leftmenu(this);changeiframe('Khgl/khwhgl/khwhjhgz')" id="" >
 							<a href="javascript:void(0);">客户维护计划规则</a>
 						</li>				
@@ -216,6 +241,15 @@
 						<li class="nav-header">渠道管理</li>
 						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/khxxqdcx')" id="" >
 							<a href="javascript:void(0);">客户信息渠道查询</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/xxypjcx')" id="" >
+							<a href="javascript:void(0);">信息员评价查询</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/xxyqd')" id="" >
+							<a href="javascript:void(0);">信息员渠道</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/qtqd')" id="" >
+							<a href="javascript:void(0);">其他渠道</a>
 						</li><!-- 
 						<li onclick="leftmenu(this);changeiframe('Khgl/qdgl/xxyqd')" id="" >
 							<a href="javascript:void(0);">信息员渠道</a>
@@ -245,6 +279,9 @@
 						</li>					
 						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/yqkhcs')" id="">
 							<a href="javascript:void(0);">逾期客户催收</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/csjhzdyj')" id="">
+							<a href="javascript:void(0);">催收计划主动移交</a>
 						</li>					
 						<li onclick="leftmenu(this);changeiframe('Zhfxgl/csgl/yqkhzlcx')" id="">
 							<a href="javascript:void(0);">逾期客户资料查询</a>
@@ -274,6 +311,12 @@
 						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/fxsxcx')" id="">
 							<a href="javascript:void(0);">风险事项查询</a>
 						</li>	
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/fxsxsc')" id="">
+							<a href="javascript:void(0);">风险事项上传</a>
+						</li>			
+						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/clfxkhwh')" id="">
+							<a href="javascript:void(0);">存量风险客户维护</a>
+						</li>
 						<li onclick="leftmenu(this);changeiframe('Zhfxgl/fxsxgl/fxxxgl')" id="">
 							<a href="javascript:void(0);">风险信息管理</a>
 						</li>			
@@ -401,6 +444,21 @@
 						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/khedgl')" id="">
 							<a href="javascript:void(0);">客户额度管理</a>
 						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/khjljbxx')" id="">
+							<a href="javascript:void(0);">基本信息</a>
+						</li>											
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/rcglxx')" id="">
+							<a href="javascript:void(0);">日常管理信息</a>
+						</li>										
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/sxglxx')" id="">
+							<a href="javascript:void(0);">属性管理信息</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/sxtdgl')" id="">
+							<a href="javascript:void(0);">所辖团队管理</a>
+						</li>	
+						<li onclick="leftmenu(this);changeiframe('Khjlgl/khjlxxgl/grxx')" id="">
+							<a href="javascript:void(0);">个人信息</a>
+						</li>
 					</ul>										
 					<ul class="nav nav-list 
 							{%- if menu != "xtgl_zg"%}
@@ -410,6 +468,9 @@
 						<li class="nav-header">系统管理</li>
 						<li onclick="leftmenu(this);changeiframe('')" id="" class="active">
 							<a href="javascript:void(0);">问责规则管理</a>
+						</li>
+						<li onclick="leftmenu(this);changeiframe('Xtgl/pggzwh')" id="">
+							<a href="javascript:void(0);">评估规则维护</a>
 						</li>
 						<li onclick="leftmenu(this);changeiframe('')" id="">
 							<a href="javascript:void(0);">不良资产核销规则管理</a>

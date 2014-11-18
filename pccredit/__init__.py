@@ -13,4 +13,4 @@ app.config['DEBUG'] = True
 
 # 路由
 import views.index
-import views.khjlxxgl
+# import views.khjlxxgl
